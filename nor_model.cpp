@@ -9,11 +9,11 @@
 #define OUTDT 1.0e+1
 #define TMAX 1.0e+2
 
-#define NUM_PARTICLE  1000
+#define NUM_PARTICLE  10
 #define L0 1.0
 #define P1 1.0e-3
 #define rt 1.0e-4
-#define r0rt 10e+5
+#define r0rt 10e+2
 #define DT 1.0e-2
 #define run_max 100
 #define ITMAX ((int)((TMAX)/(DT)))
@@ -53,7 +53,9 @@ int main(void){
   sprintf(filename, "nor_n%d_r0rt%.0f.dat", NUM_PARTICLE,r0rt);
   if((fp0 = fopen(filename, "w")) == NULL){printf("FAILED TO OPEN FILE.\n"); exit(1);};
 
+  //printf("start");
   for(int run=0; run<run_max; run++){
+    printf("%d",run);
 
     for(int ini=0; ini<NUM_PARTICLE; ini++){
       
