@@ -28,8 +28,8 @@ ax.plot(x4, y4, 'o', markersize=1, c='green', label = r'$r=100000$')
 plt.xlabel("Time", fontsize = 18)
 plt.ylabel("S.D.", fontsize = 18)
 
-plt.xlim(0,1)
+#plt.xlim(0,1)
 
 ax.legend(loc='best')
-fig.savefig("nor_n1000_r_all.png")
+fig.savefig("tmax_nor_n1000_r_all.png")
 plt.show()
